@@ -1,22 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Piano</title>
-    <link rel="stylesheet" type="text/css" href="main.css"/>
+  <meta charset="UTF-8">
+  <title>Learn Piano 🎹</title>
+  <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <menu>
-        <input checked id="shownote" type="radio" name="i">
-        <label for="shownote">Show notes</label>
-        <input id="showkeys" type="radio" name="i">
-        <label for="showkeys">Play with keyboard</label>
-    </menu>
-    <div class="keyboard"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="beeplay.min.js"></script>
-    <script src="main.js"></script>
+<div class="game-container">
+<div class="chords-container">
+  <div class="answer-check">
+    <div class="check-answer hidden" id="right-answer">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+      <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1"
+        cy="65.1" r="62.1" />
+      <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round"
+        stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 " />
+    </svg>
+    <p class="success">Oh Yeah!</p>
+    </div>
+    
+    <div class="check-answer hidden" id="wrong-answer">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+      <circle class="path circle" fill="none" stroke="#D06079" stroke-width="6" stroke-miterlimit="10" cx="65.1"
+        cy="65.1" r="62.1" />
+      <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round"
+        stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8" y2="92.3" />
+      <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round"
+        stroke-miterlimit="10" x1="95.8" y1="38" x2="34.4" y2="92.2" />
+    </svg>
+    <p class="error">Bummer!</p>
+    </div>
+  </div>
+<div class="grid">
+  <div class="col-left">
+    <!-- Treble Clef -->
+    <div class="note_sheet treble">
+        <div class="note">
+            <span><span class="accidental"></span></span>
+
+        </div> 
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul> 
+    </div>
+  </div>
+</div>
+
+
+<div class="clear"></div>
+</div>
+<div class="keyboard-container">
+ <menu>
+   <input checked id="shownote" type="radio" name="i">
+   <label for="shownote">Show notes</label>
+   <input id="showkeys" type="radio" name="i">
+   <label for="showkeys">Play with keyboard</label>
+ </menu>
+ <div class="keyboard"></div>
+ </div>
+
+</div>
+   <div class="game-start-button"> <a href="#" class="btn animated-button thar-three">Start Game 🎹</a>
+ </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="beeplay.min.js"></script>
+  <script src="./main.js"></script>
+
 </body>
 </html>
